@@ -38,6 +38,20 @@ spring:
       max-wait-millis: 200                                  # 等待连接获取的最大超时时间
   zipkin:
     base-url: http://localhost:9411
+  redis:
+    host: 192.168.21.130              # ip地址
+    port: 6379                         #端口号
+    timeout: 3000                      #客户端超时时间单位是毫秒 默认是2000
+    password: xhh
+    #    cluster:
+    #      nodes: 127.0.0.1:6380,127.0.0.1:6381,127.0.0.1:6382     # 127.0.0.1:6380,127.0.0.1:6381,127.0.0.1:6382
+    #      max-redirects: 6
+    pool:
+      max-active: 200
+      min-idle: 0                       #最小空闲数
+      max-wait: -1                      #最大建立连接等待时间。如果超过此时间将接到异常。设为-1表示无限制。
+      maxTotal: 200
+      max-idle: 200                     #最大空闲数
 
 --- 
 
@@ -71,7 +85,20 @@ spring:
       max-wait-millis: 200                                  # 等待连接获取的最大超时时间
   zipkin:
     base-url: http://localhost:9411
-
+  redis:
+    host: 192.168.21.130              # ip地址
+    port: 6379                         #端口号
+    timeout: 3000                      #客户端超时时间单位是毫秒 默认是2000
+    password: xhh
+    #    cluster:
+    #      nodes: 127.0.0.1:6380,127.0.0.1:6381,127.0.0.1:6382     # 127.0.0.1:6380,127.0.0.1:6381,127.0.0.1:6382
+    #      max-redirects: 6
+    pool:
+      max-active: 200
+      min-idle: 0                       #最小空闲数
+      max-wait: -1                      #最大建立连接等待时间。如果超过此时间将接到异常。设为-1表示无限制。
+      maxTotal: 200
+      max-idle: 200                     #最大空闲数
 
 ---
 server:
@@ -104,3 +131,17 @@ spring:
       max-wait-millis: 200                                  # 等待连接获取的最大超时时间
   zipkin:
     base-url: http://localhost:9411
+  redis:
+    host: 192.168.21.130              # ip地址
+    port: 6379                         #端口号
+    timeout: 3000                      #客户端超时时间单位是毫秒 默认是2000
+    password: xhh
+    #    cluster:
+    #      nodes: 127.0.0.1:6380,127.0.0.1:6381,127.0.0.1:6382     # 127.0.0.1:6380,127.0.0.1:6381,127.0.0.1:6382
+    #      max-redirects: 6
+    pool:
+      max-active: 200
+      min-idle: 0                       #最小空闲数
+      max-wait: -1                      #最大建立连接等待时间。如果超过此时间将接到异常。设为-1表示无限制。
+      maxTotal: 200
+      max-idle: 200                     #最大空闲数
